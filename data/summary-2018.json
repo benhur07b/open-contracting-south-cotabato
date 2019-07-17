@@ -32,15 +32,15 @@
         "unique winners": 7,
         "top suppliers - contracts": {
             "suppliers": ["PHILIPPINE DUPLICATORS, INC.", "COPYLANDIA OFFICE SYSTEMS", "U-BIX CORPORATION", "CD TECHNOLOGIES ASIA", "MITA GENERAL SANTOS"],
-            "contracts": [21, 14, 8, 4, 3]
+            "contracts": [21, 14, 8, 4, 3],
             },
         "top suppliers - amount": {
             "suppliers": [ "COPYLANDIA OFFICE SYSTEMS", "ABS-CBN CORPORATION", "PHILIPPINE DUPLICATORS, INC.","U-BIX CORPORATION", "CD TECHNOLOGIES ASIA"],
-            "amounts": [569433.32, 500000.00, 422460.34, 126232, 37023.6]
+            "amounts": [569433.32, 500000.00, 422460.34, 126232, 37023.6],
             },
         "top suppliers - location": {
             "location": ["General Santos City", "Koronadal City", "Davao City", "Quezon City"],
-            "contracts": [44, 4, 3, 1]
+            "contracts": [44, 4, 3, 1],
             },
     },
 
@@ -54,16 +54,16 @@
         "bidders": "N/A",
         "unique winners": 9,
         "top suppliers - contracts": {
-            "suppliers": ["PEOPLES GENERAL MERCHANDISE", "STARBRIGHT OFFICE DEPOT", "GSC KRISTAN EDUC. SUPPLY", "DADIANGAS CROWN BOOKSTORE", "GAKKEN PHILIPPINES"]
-            "contracts": [67, 7, 4, 2, 2]
+            "suppliers": ["PEOPLES GENERAL MERCHANDISE", "STARBRIGHT OFFICE DEPOT", "GSC KRISTAN EDUC. SUPPLY", "DADIANGAS CROWN BOOKSTORE", "GAKKEN PHILIPPINES"],
+            "contracts": [67, 7, 4, 2, 2],
             },
         "top suppliers - amount": {
-            "suppliers": ["PEOPLES GENERAL MERCHANDISE", "DADIANGAS CROWN BOOKSTORE", "STARBRIGHT OFFICE DEPOT", "GSC KRISTAN EDUC. SUPPLY", "GAKKEN PHILIPPINES"]
-            "amount": [2111685.69, 497409.74, 259874.60, 40720.00, 26260.00]
+            "suppliers": ["PEOPLES GENERAL MERCHANDISE", "DADIANGAS CROWN BOOKSTORE", "STARBRIGHT OFFICE DEPOT", "GSC KRISTAN EDUC. SUPPLY", "GAKKEN PHILIPPINES"],
+            "amount": [2111685.69, 497409.74, 259874.60, 40720.00, 26260.00],
             },
         "top suppliers - location": {
             "location": ["Koronadal City", "Davao City", "General Santos City", "Sampaloc, Manila"],
-            "contracts": [82, 3, 1, 1]
+            "contracts": [82, 3, 1, 1],
             },
     },
 
@@ -78,15 +78,14 @@
         "unique winners": 109,
         "top suppliers - contracts": {
             "suppliers": ["SPRINTER LUMBER HARDWARE", "PEOPLES GENERAL MERCHANDISE", "ACE CENTERPOINT", "EMCOR, INC.", "PA GASOLINE STATION"],
-            "contracts": [29, 23, 15, 13, 11]
+            "contracts": [29, 23, 15, 13, 11],
             },
         "top suppliers - amount": {
             "suppliers": ["PA GASOLINE STATION", "SPRINTER LUMBER HARDWARE", "DSSD FAMILY REALTY CORP.", "APO PRODUCTION UNIT, INC.", "FRED-ANNS FOODHAUS"],
-            "amounts": [1520036.39, 1407710.91, 1188763.7, 1032000, 977500]
-            },
+            "amounts": [1520036.39, 1407710.91, 1188763.7, 1032000, 977500],
         "top suppliers - location": {
             "location": ["Koronadal City", "General Santos City", "Davao City", "Polomolok", "Banga"],
-            "contracts": [296, 39, 22, 11, 3]
+            "contracts": [296, 39, 22, 11, 3],
             },
         "days": {
             "total": 26,
@@ -104,15 +103,15 @@
         "unique winners": 82,
         "top suppliers - contracts": {
             "suppliers": ["LAFORTEZA PHARMACY", "ASEANA GENERAL MERCHANDISE", "BEROVAN MARKETING INC.", "AGREDA SHELL STATION", "ARGO DISTRIBUTORS INC."],
-            "contracts": [17, 17, 13, 11, 11]
+            "contracts": [17, 17, 13, 11, 11],
             },
         "top suppliers - amount": {
             "suppliers": ["LAFORTEZA PHARMACY", "ASEANA GENERAL MERCHANDISE", "MEDICAL GALLERY TRADING CO.", "AGREDA SHELL STATION", "BEROVAN MARKETING INC."],
-            "amounts": [36464976.30, 36042410.00, 29223626.00, 28092766.00, 24526889.45]
+            "amounts": [36464976.30, 36042410.00, 29223626.00, 28092766.00, 24526889.45],
             },
         "top suppliers - location": {
             "location": ["Davao City", "Koronadal City", "General Santos City", "Tacurong City", "Pasig City"],
-            "contracts": [75, 56, 52, 17, 7]
+            "contracts": [75, 56, 52, 17, 7],
             },
         "days": {
             "posting-prebid": 8,
@@ -122,6 +121,7 @@
             "eval-postqual": 9,
             "postqual-notice": 15,
             "total": 51,
+            "numdays":
 
         }
     },
@@ -134,12 +134,6 @@
         "contracts awarded": 1854,
         "amount of countracts awarded": 549383086.55,
         "unique winners": 192,
-        "top suppliers - contracts": {
-
-            },
-        "top suppliers - amount": {
-
-            },
     },
 
 }
