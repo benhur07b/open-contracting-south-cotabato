@@ -6,780 +6,383 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <title>Open Contracting  &#8211; Land of the Dreamweavers</title>
-    <link rel="shortcut icon" href="http://southcotabato.gov.ph/wp-content/uploads/favicon32_logo.png" type="image/x-icon"/>
+    <link rel='shortcut icon' href='http://southcotabato.gov.ph/wp-content/uploads/favicon32_logo.png' type='image/x-icon'/>
 
     <!-- Normalize -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr' crossorigin='anonymous'>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous'></script>
     <!-- Popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'></script>
     <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- Chart JS -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
-    <!-- Plotly.JS -->
-    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'></script>
+    <!-- ChartJS -->
+    <script src='https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js'></script>
+    <!-- PDF JS --><script src='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.min.js'></script>
 
+    <!-- CSS  -->
+    <link href='static/css/style.less' type='text/less' rel='stylesheet'>
+    <!-- Less -->
+    <script src='//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js' ></script>
 
-    <link href="style.css" rel="stylesheet">
+    <!-- JS -->
 </head>
-
-<body>
-    <div class="container">
-        <h1 style="padding: 1em 0 0.25em 0">OPEN CONTRACTING IN SOUTH COTABATO</h1>
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-opportunities-tab" data-toggle="pill" href="#pills-opportunities" role="tab" aria-controls="pills-opportunities" aria-selected="true">Business Opportunities</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-monitoring-tab" data-toggle="pill" href="#pills-monitoring" role="tab" aria-controls="pills-monitoring" aria-selected="false">Procurement Monitoring</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-open-data-tab" data-toggle="pill" href="#pills-open-data" role="tab" aria-controls="pills-open-data" aria-selected="false">Procurement Data</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-blacklisted-tab" data-toggle="pill" href="#pills-blacklisted" role="tab" aria-controls="pills-blacklisted" aria-selected="false">Blacklisted Entities</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact Us / Feedback</a>
-            </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                <h2 class="text-primary mt-4">About Open Contracting in South Cotabato</h2>
+<body class='d-flex flex-column'>
+    <nav class='navbar navbar-expand-lg' style='background-color: #03A9F4'>
+        <div class='container' role='navigation'>
+            <a class='navbar-brand' href=''>
+                <img src='http://southcotabato.gov.ph/wp-content/uploads/header_logo.png'>
+            </a>
+            <button class='navbar-toggler navbar-dark' type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation'>
+                <span class='navbar-toggler-icon'></span>
+            </button>
+            <div class='collapse navbar-collapse' id='navbarNavAltMarkup'>
+                <div class='nav navbar-nav' role='tablist'>
+                    <a class='nav-item nav-link nav-text' id='home-tab' href='#home' data-toggle='tab' role='tab' aria-controls='home'>Home</a>
+                    <a class='nav-item nav-link nav-text' id='opportunities-tab' href='#opportunities' data-toggle='tab' role='tab' aria-controls='opportunities'>Business Opportunities</a>
+                    <a class='nav-item nav-link nav-text' id='monitoring-tab' href='#monitoring' data-toggle='tab' role='tab' aria-controls='monitoring'>Procurement Monitoring</a>
+                    <a class='nav-item nav-link nav-text' id='open-data-tab' href='#open-data' data-toggle='tab' role='tab' aria-controls='open-data'>Procurement Data</a>
+                    <a class='nav-item nav-link nav-text' id='blacklisted-tab' href='#blacklisted' data-toggle='tab' role='tab' aria-controls='blacklisted'>Blacklisted Entities</a>
+                    <a class='nav-item nav-link nav-text' id='contact-tab' href='#contact' data-toggle='tab' role='tab' aria-controls='contact'>Contact Us / Feedback</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class='container' id='page-content'>
+        <div class='tab-content'>
+            <div class='tab-pane fade show active' id='home' role='tabpanel' aria-labelledby='home-tab'>
+                <h1 class='mt-4'>Open Contracting in South Cotabato</h1>
+                <h3 class='text-primary mt-4'>About Open Contracting in South Cotabato</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h3 class='text-primary mt-4'>About This Web Page</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
             </div>
 
-            <div class="tab-pane fade" id="pills-opportunities" role="tabpanel" aria-labelledby="pills-opportunities-tab">
-                <h2 class="text-primary mt-4">Annual Procurement Plan</h2>
-                <iframe class="airtable-embed" src="https://airtable.com/embed/shrta5BZbuZODjR87?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+            <div class='tab-pane fade' id='opportunities' role='tabpanel' aria-labelledby='opportunities-tab'>
+                <h1 class='mt-4'>Business Opportunities</h1>
+                <p><button class='btn btn-primary my-2' type='button' data-toggle='collapse' data-target='#about-opportunities' aria-expanded='false' aria-controls='about-opportunities'>
+                    <small>ABOUT THIS PAGE</small>
+                    </button>
+                </p>
+                <div class='collapse' id='about-opportunities'>
+                    <div class='card card-body'>
+                    This page holds information on existing and future procurement opportunities with the province of South Cotabato.
+                    </div>
+                </div>
 
-                <h2 class="text-primary mt-4">Bid Opportunities</h2>
-                <iframe class="airtable-embed" src="https://airtable.com/embed/shrMooN3FTPFq4jbj?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                <h3 class='text-primary mt-2'>Annual Procurement Plan</h3>
+                <p class='text-secondary'><i>The APP is the document that consolidates the various Project Procurement Management Plan (PPMP) submitted by the various Project Management Offices (PMI) and end-user units within the Procuring Entity. It reflects the entirety of the procurement activities that will be undertaken by the Procuring Entity within the calendar year. </i></p>
+                <iframe class='airtable-embed mt-2' src='https://airtable.com/embed/shrhmyO0Tz4V4PQ7k?backgroundColor=blue' frameborder='0' onmousewheel='' width='100%' height='533' style='background: transparent; border: 1px solid #ccc;'></iframe>
 
-                <h2 class="text-primary mt-4">Awarded Bids</h2>
-                <iframe class="airtable-embed" src="https://airtable.com/embed/shrvCBTOTkbJI6dyY?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
-                <h2 class="text-primary mt-4">Status Tracker</h2>
+                <h3 class='text-primary mt-4'>Price of Commonly Procured Items</h3>
+                <p class='text-secondary'><i>The price of commonly procured items based on field research by the provincial government.</i></p>
 
-                <iframe class="airtable-embed" src="https://airtable.com/embed/shrPRTyBzwGEyrY1d?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                <h3 class='text-primary mt-4'>Bid Opportunities</h3>
+                <p class='text-secondary'><i>Upcoming procurement opportunities with the province of South Cotabato.</i></p>
+                <iframe class='airtable-embed' src='https://airtable.com/embed/shrSIwpEgJtmcf3Nb?backgroundColor=blue' frameborder='0' onmousewheel='' width='100%' height='533' style='background: transparent; border: 1px solid #ccc;'></iframe>
 
-                <h2 class="text-primary mt-4">Price of Commonly Procured Items</h2>
+                <h3 class='text-primary mt-4'>Awarded Bids</h3>
+                <p class='text-secondary'><i>Awarded contracts for procurement projects by the province of South Cotabato.</i></p>
+                <iframe class='airtable-embed' src='https://airtable.com/embed/shrDhYMPom2b5rpBY?backgroundColor=blue' frameborder='0' onmousewheel='' width='100%' height='533' style='background: transparent; border: 1px solid #ccc;'></iframe>
 
+                <h3 class='text-primary mt-4'>Status Tracker</h3>
+                <p class='text-secondary'><i>Status of awarded procurement projects.</i></p>
+                <iframe class='airtable-embed' src='https://airtable.com/embed/shrBlzgSUNGAWgwnn?backgroundColor=blue' frameborder='0' onmousewheel='' width='100%' height='533' style='background: transparent; border: 1px solid #ccc;'></iframe>
             </div>
 
-            <div class="tab-pane fade" id="pills-monitoring" role="tabpanel" aria-labelledby="pills-monitoring-tab">
-                <select id="selectYearMonitoring" onchange="changeYearMonitoring()" class="mb-2">
-                    <!-- <option value="2019">2019</option> -->
-                    <option value="2018" selected="selected">2018</option>
-                    <!-- <option value="2017">2017</option> -->
-                </select>
-
-                <nav class="nav nav-pills">
-                    <a class="nav-link" href="#public-bidding">Public Bidding</a>
-                    <a class="nav-link" href="#svp">Small Value Procurement</a>
-                    <a class="nav-link" href="#shopping">Shopping</a>
-                    <a class="nav-link" href="#direct-contracting">Direct Contracting</a>
-                    <!-- <a class="nav-link" href="#apr">APR</a>
-                    <a class="nav-link" href="#repeat-order">Repeat Order</a> -->
-                </nav>
-
-                <div class="row py-2">
-                    <div class="col-md-6 col-sm-12 py-2">
-                        <h3>Procurement Activities per Mode</h3>
-                        <canvas id="procurement-per-mode" width="480" height="480"></canvas>
-                    </div>
-                    <div class="col-md-6 col-sm-12 py-2">
-                        <h3>Awarded Contracts per Mode</h3>
-                        <canvas id="contracts-per-mode" width="480" height="480"></canvas>
-                    </div>
-                    <div class="col-md-6 col-sm-12 py-2">
-                        <h3>Approved Budget per Mode</h3>
-                        <canvas id="budget-per-mode" width="480" height="480"></canvas>
-                    </div>
-                    <div class="col-md-6 col-sm-12 py-2">
-                        <h3>Contract Amount per Mode</h3>
-                        <canvas id="amount-per-mode" width="480" height="480"></canvas>
+            <div class='tab-pane fade' id='monitoring' role='tabpanel' aria-labelledby='monitoring-tab'>
+                <h1 class='mt-4'>Procurement Monitoring</h1>
+                <p><button class='btn btn-primary my-2' type='button' data-toggle='collapse' data-target='#about-monitoring' aria-expanded='false' aria-controls='about-monitoring'>
+                    <small>ABOUT THIS PAGE</small>
+                </button>
+                </p>
+                <div class='collapse mb-4' id='about-monitoring'>
+                    <div class='card card-body'>
+                    This page includes analyses and visualizations of South Cotabato procurement data.
                     </div>
                 </div>
 
-                <h2 class="text-primary" id="public-bidding">Public Bidding</h2>
-                <div class="row py-2">
-                    <div class="col-md-3 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="itb-procurement-activities" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">187</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Procurement Activites</p>
-                            </div>
-                        </div>
+                <div class='row mb-2'>
+                    <div class='col-lg-6 col-sm-5'>
+                        <p class='mb-1'><b>YEAR:</b>
+                            <select id='selectYearMonitoring' onchange='changeYearMonitoring()' class='mb-2 ml-2 px-2'>
+                                <!-- <option value='2019'>2019</option> -->
+                                <option value='2018' selected='selected'>2018</option>
+                                <!-- <option value='2017'>2017</option> -->
+                            </select>
+                        </p>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="itb-procurement-failed" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">34</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Failed Procurement</p>
-                            </div>
-                        </div>
+                    <div class='col-lg-6 col-sm-7'>
+                        <p class='mb-1'><b>TYPE:</b>
+                            <select id='selectTypeMonitoring' onchange='changeTypeMonitoring()' class='mb-2 ml-2 px-2'>
+                                <option value='goods-and-services' selected='selected'>Goods and Services</option>
+                                <option value='infrastructure' >Infrastructure</option>
+                            </select>
+                        </p>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="itb-procurement-completed" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">153</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Completed Procurement</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="itb-contracts-awarded" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">282</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Contracts Awarded</p>
-                            </div>
-                        </div>
-                    </div>
+                </div>
 
-                    <div class="col-md-3 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="itb-bidders" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">350</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Total Bidders</p>
-                            </div>
+                <div id='accordion'>
+                    <div class='card mb-2'>
+                        <div class='card-header' id='monitoring-by-mode-header'  style='cursor: pointer'>
+                            <a data-toggle='collapse' data-target='#monitoring-by-mode' aria-expanded='true' aria-controls='monitoring-by-mode'>
+                            <h3 class='text-primary mb-2'>Summary per Mode</h3>
+                            <p class='text-secondary mb-0'><i>Comparison of activities across different procurement modes.</i></p>
+                            </a>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="itb-bidders-per-act" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">1.87</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Bidders / Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="itb-unique-winners" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">82</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Unique Suppliers</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="itb-winners-per-contract" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">1 : 4</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Suppliers / Contract</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="itb-abc" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">521.1 M</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Approved Budget</p>
+                        <div id='monitoring-by-mode' class='collapse' aria-labelledby='monitoring-by-mode-header'>
+                            <div class='card-body'>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="itb-contract-amount" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">438.0 M</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Amount of Awarded Contracts</p>
+                    <div class='card mb-2'>
+                        <div class='card-header' id='monitoring-timelines-header'  style='cursor: pointer'>
+                            <a data-toggle='collapse' data-target='#monitoring-timelines' aria-expanded='true' aria-controls='monitoring-timelines'>
+                            <h3 class='text-primary mb-2'>Timelines and Schedules</h3>
+                            <p class='text-secondary mb-0'><i>How many days does a procurement activity normally take? How fast are suppliers/contractors getting paid?</i></p>
+                            </a>
+                        </div>
+
+                        <div id='monitoring-timelines' class='collapse' aria-labelledby='monitoring-timelines-header'>
+                            <div class='card-body'>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="itb-eff" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">84.05 %</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Cost Effectiveness</p>
+                    <div class='card mb-2'>
+                        <div class='card-header' id='monitoring-public-bidding-header'  style='cursor: pointer'>
+                            <a data-toggle='collapse' data-target='#monitoring-public-bidding' aria-expanded='true' aria-controls='monitoring-public-bidding'>
+                            <h3 class='text-primary mb-2'>Public Bidding</h3>
+                            <p class='text-secondary mb-0'><i>Also called Competitive Bidding. Refers to a method of procurement which is open to participation by any interested party and which consists of the following processes: advertisement, pre-bid conference, eligibility screening of prospective bidders, receipt and opening of bids, evaluation of bids, post-qualification, and award of contract. </i></p>
+                            </a>
+                        </div>
+
+                        <div id='monitoring-public-bidding' class='collapse' aria-labelledby='monitoring-public-bidding-header'>
+                            <div class='card-body'>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class='card mb-2'>
+                        <div class='card-header' id='monitoring-svp-header'  style='cursor: pointer'>
+                            <a data-toggle='collapse' data-target='#monitoring-svp' aria-expanded='true' aria-controls='monitoring-svp'>
+                            <h3 class='text-primary mb-2'>Small Value Procurement</h3>
+                            <p class='text-secondary mb-0'><i>Where the procurement does not fall under Shopping and the amount involved does not exceed the thresholds prescribed in Annex “H” of RA 9184's IRR.</i></p>
+                            </a>
+                        </div>
+
+                        <div id='monitoring-svp' class='collapse' aria-labelledby='monitoring-svp-header'>
+                            <div class='card-body'>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class='card mb-2'>
+                        <div class='card-header' id='monitoring-shopping-header'  style='cursor: pointer'>
+                            <a data-toggle='collapse' data-target='#monitoring-shopping' aria-expanded='true' aria-controls='monitoring-shopping'>
+                            <h3 class='text-primary mb-2'>Shopping</h3>
+                            <p class='text-secondary mb-0'><i>Shopping is a method of procurement of goods whereby the procuring entity simply requests for the submission of price quotations for readily available off-the-shelf goods or ordinary/regular equipment to be procured directly from suppliers of known qualifications.</i></p>
+                            </a>
+                        </div>
+
+                        <div id='monitoring-shopping' class='collapse' aria-labelledby='monitoring-shopping-header'>
+                            <div class='card-body'>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class='card mb-2'>
+                        <div class='card-header' id='monitoring-direct-contracting-header'  style='cursor: pointer'>
+                            <a data-toggle='collapse' data-target='#monitoring-direct-contracting' aria-expanded='true' aria-controls='monitoring-direct-contracting'>
+                            <h3 class='text-primary mb-2'>Direct Contracting</h3>
+                            <p class='text-secondary mb-0'><i>Direct Contracting or single source procurement is a method of procurement of goods that does not require elaborate Bidding Documents. The supplier is simply asked to submit a price quotation or a pro-forma invoice together with the conditions of sale. The offer may be accepted immediately or after some negotiations.</i></p>
+                            </a>
+                        </div>
+
+                        <div id='monitoring-direct-contracting' class='collapse' aria-labelledby='monitoring-direct-contracting-header'>
+                            <div class='card-body'>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="row py-2">
-                    <div class="col-sm-12 py-2">
-                        <h3>Top Suppliers by Contracts Awarded</h3>
-                        <canvas id="itb-top-contracts" width="480" height="270"></canvas>
-                    </div>
-                    <div class="col-sm-12 py-2">
-                        <h3>Top Suppliers by Contract Amount</h3>
-                        <canvas id="itb-top-amount" width="480" height="270"></canvas>
-                    </div>
-                    <div class="col-sm-12 py-2">
-                        <h3>Top Location of Suppliers</h3>
-                        <canvas id="itb-top-loc" width="480" height="270"></canvas>
-                    </div>
-                </div>
-
-                <h3>Days from Posting to Notice of Award</h3>
-                <div class="row py-2">
-                    <div class="col-sm-12 py-2">
-                        <canvas id="itb-days-post-notice" width="480" height="270"></canvas>
-                    </div>
-                </div>
-
-                <div class="row py-2">
-                    <div class="col-md-4 col-sm-4 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <p class="card-text text-secondary" style="text-align: center;">Minimum Days from Notice to Award</p>
-                                <h2 id="itb-min-days" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">15 Days</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <p class="card-text text-secondary" style="text-align: center;">Average Days from Notice to Award</p>
-                                    <h2 id="itb-mean-days" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">51 Days</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <p class="card-text text-secondary" style="text-align: center;">Maximum Days from Notice to Award</p>
-                                    <h2 id="itb-max-days" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">141 Days</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h3 class="my-2">Average Calendar Days per Procurement Step</h3>
-                <div class="row py-2">
-                    <div class="col-md-2 col-sm-4 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <p class="card-text text-secondary" style="text-align: center;">Posting to Pre-Bid</p>
-                                <h2 id="itb-1-days" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">8</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <p class="card-text text-secondary" style="text-align: center;">Pre-Bid to Eligibility</p>
-                                <h2 id="itb-2-days" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">14</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <p class="card-text text-secondary" style="text-align: center;">Eligibility to Bid Opening</p>
-                                <h2 id="itb-3-days" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">14</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <p class="card-text text-secondary" style="text-align: center;">Bid Opening to Evaluation</p>
-                                <h2 id="itb-4-days" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">9</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <p class="card-text text-secondary" style="text-align: center;">Evaluation to Post-Qual</p>
-                                <h2 id="itb-5-days" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">9</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <p class="card-text text-secondary" style="text-align: center;">Post-Qual to Notice</p>
-                                <h2 id="itb-6-days" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">15</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="text-primary mt-4" id="svp">Small Value Procurement</h2>
-                <div class="row py-2">
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="svp-procurement-activities" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">1122</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Procurement Activites</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="svp-procurement-failed" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">184</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Failed Procurement</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="svp-procurement-completed" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">938</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Completed Procurement</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="svp-contracts-awarded" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">1407</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Contracts Awarded</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="svp-unique-winners" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">109</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Unique Suppliers</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="svp-suppliers-per-contract" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">1 : 13</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Suppliers / Contract</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="svp-abc" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">126.1 M</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Approved Budget</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="svp-contract-amount" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">104.9 M</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Amount of Awarded Contracts</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="svp-eff" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">83.20 %</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Cost Effectiveness</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row py-2">
-                    <div class="col-sm-12 py-2">
-                        <h3>Top Suppliers by Contracts Awarded</h3>
-                        <canvas id="svp-top-contracts" width="480" height="270"></canvas>
-                    </div>
-                    <div class="col-sm-12 py-2">
-                        <h3>Top Suppliers by Contract Amount</h3>
-                        <canvas id="svp-top-amount" width="480" height="270"></canvas>
-                    </div>
-                    <div class="col-sm-12 py-2">
-                        <h3>Top Location of Suppliers</h3>
-                        <canvas id="svp-top-loc" width="480" height="270"></canvas>
-                    </div>
-                </div>
-
-                <h2 class="text-primary mt-4" id="shopping">Shopping</h2>
-                <div class="row py-2">
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="sm-procurement-activities" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">93</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Procurement Activites</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="sm-procurement-failed" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">19</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Failed Procurement</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="sm-procurement-completed" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">74</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Completed Procurement</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="sm-contracts-awarded" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">50</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Contracts Awarded</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="sm-unique-winners" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">7</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Unique Suppliers</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="sm-suppliers-per-contract" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">1 : 7</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Suppliers / Contract</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="sm-abc" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">1.90 M</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Approved Budget</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="sm-contract-amount" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Amount of Awarded Contracts</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="sm-eff" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">92.38 %</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Cost Effectiveness</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row py-2">
-                    <div class="col-sm-12 py-2">
-                        <h3>Top Suppliers by Contracts Awarded</h3>
-                        <canvas id="sm-top-contracts" width="480" height="270"></canvas>
-                    </div>
-                    <div class="col-sm-12 py-2">
-                        <h3>Top Suppliers by Contract Amount</h3>
-                        <canvas id="sm-top-amount" width="480" height="270"></canvas>
-                    </div>
-                    <div class="col-sm-12 py-2">
-                        <h3>Top Location of Suppliers</h3>
-                        <canvas id="sm-top-loc" width="480" height="270"></canvas>
-                    </div>
-                </div>
-
-                <h2 class="text-primary mt-4" id="direct-contracting">Direct Contracting</h2>
-                <div class="row py-2">
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="dc-procurement-activities" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">54</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Procurement Activites</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="dc-procurement-failed" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">7</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Failed Procurement</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="dc-procurement-completed" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">47</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Completed Procurement</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="dc-contracts-awarded" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">87</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Contracts Awarded</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="dc-unique-winners" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">9</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Unique Suppliers</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="dc-suppliers-per-contract" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">1 : 10</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Suppliers / Contract</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="dc-abc" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">3.89 M</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Approved Budget</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="dc-contract-amount" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">3.00 M</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Amount of Awarded Contracts</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="dc-eff" class="card-title color-primary-dark" style="color:#0084de; text-align: center;">77.15 %</h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Cost Effectiveness</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row py-2">
-                    <div class="col-sm-12 py-2">
-                        <h3>Top Suppliers by Contracts Awarded</h3>
-                        <canvas id="dc-top-contracts" width="480" height="270"></canvas>
-                    </div>
-                    <div class="col-sm-12 py-2">
-                        <h3>Top Suppliers by Contract Amount</h3>
-                        <canvas id="dc-top-amount" width="480" height="270"></canvas>
-                    </div>
-                    <div class="col-sm-12 py-2">
-                        <h3>Top Location of Suppliers</h3>
-                        <canvas id="dc-top-loc" width="480" height="270"></canvas>
-                    </div>
-                </div>
-
-                <!-- <h2 class="text-primary mt-4" id="apr">APR</h2>
-                <div class="row py-2">
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="apr-procurement-activities" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Procurement Activites</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="apr-procurement-failed" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Failed Procurement</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="apr-procurement-completed" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Completed Procurement</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="apr-contracts-awarded" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Contracts Awarded</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="apr-unique-winners" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Unique Suppliers</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="apr-suppliers-per-contract" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Suppliers / Contract</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="apr-abc" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Approved Budget</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="apr-contract-amount" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Amount of Awarded Contracts</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="apr-eff" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Cost Effectiveness</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="text-primary mt-4" id="repeat-order">Repeat Order</h2>
-                <div class="row py-2">
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="ro-procurement-activities" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Procurement Activites</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="ro-procurement-failed" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Failed Procurement</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="ro-procurement-completed" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Completed Procurement</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="ro-contracts-awarded" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Contracts Awarded</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="ro-unique-winners" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Unique Suppliers</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="ro-suppliers-per-contract" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Suppliers / Contract</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="ro-abc" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Approved Budget</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="ro-contract-amount" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Amount of Awarded Contracts</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 p-1">
-                        <div class="card">
-                            <div class="card-body bg-warning">
-                                <h2 id="ro-eff" class="card-title color-primary-dark" style="color:#0084de; text-align: center;"></h2>
-                                <p class="card-text text-secondary" style="text-align: center;">Cost Effectiveness</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
- -->
-
             </div>
 
-            <div class="tab-pane fade" id="pills-open-data" role="tabpanel" aria-labelledby="pills-open-data-tab">
-                <h2 class="text-primary mt-4">Procurement Data</h2>
-                <iframe class="airtable-embed" src="https://airtable.com/embed/shr3h8YKCRFvC9VPX?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+            <div class='tab-pane fade' id='open-data' role='tabpanel' aria-labelledby='open-data-tab'>
+                <h1 class='mt-4'>Procurement Data</h1>
+                <p><button class='btn btn-primary my-2' type='button' data-toggle='collapse' data-target='#about-open-data' aria-expanded='false' aria-controls='about-open-data'>
+                    <small>ABOUT THIS PAGE</small>
+                </button>
+                </p>
+                <div class='collapse mb-4' id='about-open-data'>
+                    <div class='card card-body'>
+                    This page contains free, open, and machine-readable procurement data related to South Cotabato.
+                    </div>
+                </div>
+                <h3 class='text-primary mt-2'>Procurement Monitoring Report</h3>
+                <p class='text-secondary'><i>Procurement Monitoring Reports are submitted by procuring entities to the Government Procurement Policy Board (GPPB). These documents include data on the names, budgets, end-users, and schedules of procurement projects.
+                <br><br>Below are subsets of the Procurement Monitoring Reports by South Cotabato. The complete Procurement Monitoring Reports (as spreadsheet and .csv files) can be downloaded <a href='#'>here</a></i></p>
 
+                <div id='open-data-accordion'>
+                    <div class='card mb-2'>
+                        <div class='card-header' id='open-data-public-bidding-header'  style='cursor: pointer'>
+                            <a data-toggle='collapse' data-target='#open-data-public-bidding' aria-expanded='true' aria-controls='open-data-public-bidding'>
+                            <h3 class='text-primary mb-2'>Public Bidding</h3>
+                            <p class='text-secondary mb-0'><i>Also called Competitive Bidding. Refers to a method of procurement which is open to participation by any interested party and which consists of the following processes: advertisement, pre-bid conference, eligibility screening of prospective bidders, receipt and opening of bids, evaluation of bids, post-qualification, and award of contract.</i></p>
+                            </a>
+                        </div>
+
+                        <div id='open-data-public-bidding' class='collapse' aria-labelledby='open-data-public-bidding-header'>
+                            <div class='card-body'>
+                            <iframe class='airtable-embed' src='https://airtable.com/embed/shrjwvuppXJw4JDVw?backgroundColor=blue' frameborder='0' onmousewheel='' width='100%' height='533' style='background: transparent; border: 1px solid #ccc;'></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='card mb-2'>
+                        <div class='card-header' id='open-data-svp-header'  style='cursor: pointer'>
+                            <a data-toggle='collapse' data-target='#open-data-svp' aria-expanded='true' aria-controls='open-data-svp'>
+                            <h3 class='text-primary mb-2'>Small Value Procurement</h3>
+                            <p class='text-secondary mb-0'><i>Where the procurement does not fall under Shopping and the amount involved does not exceed the thresholds prescribed in Annex “H” of RA 9184's IRR.</i></p>
+                            </a>
+                        </div>
+
+                        <div id='open-data-svp' class='collapse' aria-labelledby='open-data-svp-header'>
+                            <div class='card-body'>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class='card mb-2'>
+                        <div class='card-header' id='open-data-shopping-header'  style='cursor: pointer'>
+                            <a data-toggle='collapse' data-target='#open-data-shopping' aria-expanded='true' aria-controls='open-data-shopping'>
+                            <h3 class='text-primary mb-2'>Shopping</h3>
+                            <p class='text-secondary mb-0'><i>Shopping is a method of procurement of goods whereby the procuring entity simply requests for the submission of price quotations for readily available off-the-shelf goods or ordinary/regular equipment to be procured directly from suppliers of known qualifications.</i></p>
+                            </a>
+                        </div>
+
+                        <div id='open-data-shopping' class='collapse' aria-labelledby='open-data-shopping-header'>
+                            <div class='card-body'>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class='card mb-2'>
+                        <div class='card-header' id='open-data-direct-contracting-header'  style='cursor: pointer'>
+                            <a data-toggle='collapse' data-target='#open-data-direct-contracting' aria-expanded='true' aria-controls='open-data-direct-contracting'>
+                            <h3 class='text-primary mb-2'>Direct Contracting</h3>
+                            <p class='text-secondary mb-0'><i>Direct Contracting or single source procurement is a method of procurement of goods that does not require elaborate Bidding Documents. The supplier is simply asked to submit a price quotation or a pro-forma invoice together with the conditions of sale. The offer may be accepted immediately or after some negotiations.</i></p>
+                            </a>
+                        </div>
+
+                        <div id='open-data-direct-contracting' class='collapse' aria-labelledby='open-data-direct-contracting-header'>
+                            <div class='card-body'>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class='card mb-2'>
+                        <div class='card-header' id='open-data-apr-header'  style='cursor: pointer'>
+                            <a data-toggle='collapse' data-target='#open-data-apr' aria-expanded='true' aria-controls='open-data-apr'>
+                            <h3 class='text-primary mb-2'>Agency Procurement Request (APR)</h3>
+                            <p class='text-secondary mb-0'><i>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</i></p>
+                            </a>
+                        </div>
+
+                        <div id='open-data-apr' class='collapse' aria-labelledby='open-data-apr-header'>
+                            <div class='card-body'>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class='card mb-2'>
+                        <div class='card-header' id='open-data-repeat-order-header'  style='cursor: pointer'>
+                            <a data-toggle='collapse' data-target='#open-data-repeat-order' aria-expanded='true' aria-controls='open-data-repeat-order'>
+                            <h3 class='text-primary mb-2'>Repeat Order</h3>
+                            <p class='text-secondary mb-0'><i>Repeat Order, when provided for in the APP, is a method of procurement of goods from the previous winning bidder, whenever there is a need to replenish goods procured under a contract previously awarded through Competitive Bidding. </i></p>
+                            </a>
+                        </div>
+
+                        <div id='open-data-repeat-order' class='collapse' aria-labelledby='open-data-repeat-order-header'>
+                            <div class='card-body'>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class='text-primary mt-4'>Constructors Performance Evaluation Systems (CPES) Report</h3>
+                <p class='text-secondary'><i>The Constructors Performance Evaluation Systems (CPES) is a system of grading the performance of a constructor for a specific kind of projects using a set of criteria, approved by the NEDA-INFRACOM. The performance of the constructor shall be evaluated “during construction” and “upon completion” of a project. The assigned weights and aspects to be evaluated vary depending on the kind of project.<br><br>Below are the CPES Reports of constructors for projects in South Cotabato.</i></p>
+                <iframe class='airtable-embed mb-2' src='https://airtable.com/embed/shrCl928D1Vsvk0Qe?backgroundColor=blue' frameborder='0' onmousewheel='' width='100%' height='533' style='background: transparent; border: 1px solid #ccc;'></iframe>
+                <p class='text-secondary'><i>Below are the Amended Guidelines of the CPES.</i></p>
+                <iframe class='mb-4' src='/data/pdf/CPES Amended Guidelines 2011.pdf' width='100%' height='600px'></iframe>
             </div>
 
-            <div class="tab-pane fade" id="pills-blacklisted" role="tabpanel" aria-labelledby="pills-blacklisted-tab">
-                <h2 class="text-primary mt-4">Blacklisted Entities</h2>
-                <iframe class="airtable-embed" src="https://airtable.com/embed/shrq1UZF7gXj74nXB?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+            <div class='tab-pane fade' id='blacklisted' role='tabpanel' aria-labelledby='blacklisted-tab'>
+                <h1 class='mt-4'>Blacklisted Entities</h1>
+                <p><button class='btn btn-primary my-2' type='button' data-toggle='collapse' data-target='#about-blacklisted' aria-expanded='false' aria-controls='about-blacklisted'>
+                    <small>ABOUT THIS PAGE</small>
+                </button>
+                </p>
+                <div class='collapse mb-4' id='about-blacklisted'>
+                    <div class='card card-body'>
+                    This page contains data and information on blacklisting and blacklisted contractors.
+                    </div>
+                </div>
+                <h3 class='text-primary mt-2'>Blacklisted Entities</h3>
+                <p class='text-secondary'><i>A Blacklisted Person/Entity is a person/entity who was disqualified by an agency and/or is included in the Government Procurement Policy Board (“GPPB”) Consolidated Blacklisting Report. Persons/Entities blacklisted by a procuring entity and/or included in the GPPB Consolidated Blacklisting Report shall not be allowed to participate in the bidding of all government projects during the period of disqualification unless it is delisted as provided for in these guidelines.<br><br>Below is list of Blacklisted Entities from the GPPB.</i></p>
+                <iframe class='airtable-embed mb-2' src='https://airtable.com/embed/shrOd0rCCopG16RyY?backgroundColor=blue' frameborder='0' onmousewheel='' width='100%' height='533' style='background: transparent; border: 1px solid #ccc;'></iframe>
+
+                <h3 class='text-primary mt-4'>Uniform Guidelines For Blacklisting Of Manufacturers, Suppliers, Distributors, Contractors And Consultants</h3>
+                <p class='text-secondary'><i>Below are the guidelines that shall govern the blacklisting of manufacturers, suppliers, distributors, contractors and consultants (“contractors” for brevity) involved in government procurement for offenses or violations committed during competitive bidding and contract implementation, in accordance with Section 69.4 of the Implementing Rules and Regulations Part A (“IRR-A”) of Republic Act No. 9184 (“R.A. 9184”), otherwise known as the “Government Procurement Reform Act.”</i></p>
+                <iframe class='mb-4' src='/data/pdf/Blacklisting.pdf' width='100%' height='600px'></iframe>
             </div>
 
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <h2 class="text-primary mt-4">Questions? Clarifications? Issues to Report?</h2>
-                <div class="row pt-4">
-                    <div class="col-md-6 col-sm-12 pb-4">
-                        <h2>Contact Us</h2>
-                        <form action="https://formspree.io/email@domain.tld" method="POST" />
-                            <input class="contact-form" type="text" name="name" placeholder="Your name">
-                            <input class="contact-form" type="text" name="organization" placeholder="Your organization">
-                            <input class="contact-form" type="email" name="_replyto" placeholder="Your email">
-                            <textarea  style="height: 200px" class="contact-form" name="message" placeholder="Your message"></textarea>
-                            <button class="contact-form" class="btn btn-sm btn-primary col-sm-4" type="submit">SUBMIT</button>
+            <div class='tab-pane fade' id='contact' role='tabpanel' aria-labelledby='contact-tab'>
+                <h1 class='mt-4'>Contact Us / Feedback</h1>
+                <div class='row pt-4'>
+                    <div class='col-md-6 col-sm-12 pb-4'>
+                        <form action='https://formspree.io/southcotogp.hivos2019@gmail.com' method='POST' />
+                            <input class='contact-form' type='text' name='name' placeholder='Your name (Pangalan)'>
+                            <input class='contact-form' type='text' name='organization' placeholder='Your organization (Organisasyon)'>
+                            <input class='contact-form' type='email' name='_replyto' placeholder='Your email (Email)'>
+                            <input class='contact-form' type='text' name='number' placeholder='Contact Number'>
+                            <textarea  style='height: 200px' class='contact-form' name='message' placeholder='Your message (Mensahe)'></textarea>
+                            <button class='contact-form' class='btn btn-sm btn-primary col-sm-4' type='submit'>SUBMIT (ISUMITE)</button>
                         </form>
                     </div>
-                    <div class="col-md-6 col-sm-12">
-                        <h2 class="text-right">Other Links</h2>
-                        <h4 class="pb-3 text-right"><a href="http://southcotabato.gov.ph/">South Cotabato Provincial Government</a></h4>
-                        <h4 class="pb-3 text-right"><a href="https://www.philgeps.gov.ph/">Philippine Government Electronic Procurement System (PhilGEPS)</a></h4>
-                        <h4 class="pb-3 text-right"><a href="https://www.gppb.gov.ph/">Government Procurement Policy Board (GPPB)</a></h4>
-                        <h4 class="pb-3 text-right"><a href="http://data.gov.ph/">Open Data Philippines</a></h4>
-                        <h4 class="pb-3 text-right"><a href="https://www.foi.gov.ph/">Freedom of Information (FOI) Philippines</a></h4>
-                        <h4 class="pb-3 text-right"><a href="https://www.open-contracting.org/">Open Contracting Partnership</a></h4>
-                        <h4 class="pb-3 text-right"><a href="https://www.opengovpartnership.org/">Open Government Partnership</a></h4>
+                    <div class='col-md-6 col-sm-12'>
+                        <h3 class='pb-3 text-right'>Other Links</h3>
+                        <h5 class='pb-3 text-right'><a href='http://southcotabato.gov.ph/'>South Cotabato Provincial Government</a></h5>
+                        <h5 class='pb-3 text-right'><a href='https://www.philgeps.gov.ph/'>Philippine Government Electronic Procurement System (PhilGEPS)</a></h5>
+                        <h5 class='pb-3 text-right'><a href='https://www.gppb.gov.ph/'>Government Procurement Policy Board (GPPB)</a></h5>
+                        <h5 class='pb-3 text-right'><a href='http://data.gov.ph/'>Open Data Philippines</a></h5>
+                        <h5 class='pb-3 text-right'><a href='https://www.foi.gov.ph/'>Freedom of Information (FOI) Philippines</a></h5>
+                        <h5 class='pb-3 text-right'><a href='https://www.open-contracting.org/'>Open Contracting Partnership</a></h5>
+                        <h5 class='pb-3 text-right'><a href='https://www.opengovpartnership.org/'>Open Government Partnership</a></h5>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <button onclick='topFunction()' id='to-top-button' title='Go to top'><i class='fas fa-chevron-up'></i></button>
 
+    <footer id='sticky-footer' class='mt-4'>
+        <div class='container my-2'>
+            <small class='text-white'>This webpage was designed and developed by <a href='https://bnhr.xyz'>BNHR</a> with the help and support of <a href='https://www.hivos.org/'>Hivos - Humanist Institute for Cooperation with Developing Countries</a>, <br>the <a href='eccp.com/'>European Chamber of Commerce of the Philippines (ECCP)</a>, and the <a href='http://southcotabato.gov.ph/'>Provincial Government of South Cotabato</a>.<br>
+            The datasets in this webpage are licensed under <a href='https://creativecommons.org/licenses/by-sa/4.0/'> a Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </small>
+        </div>
+    </footer>
+
+    <script src='static/js/back-to-top.js'></script>
+    <script src='static/js/main.js'></script>
 </body>
 </html>
