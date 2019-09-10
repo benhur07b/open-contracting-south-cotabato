@@ -12,8 +12,8 @@ Chart.scaleService.updateScaleDefaults('logarithmic', {
     }
 });
 
+// Summary
 var canvasProcPerMode = document.getElementById('procurement-per-mode').getContext('2d');
-
 var chartProcPerMode = new Chart(canvasProcPerMode, {
     type: 'bar',
     data: {
@@ -55,7 +55,6 @@ var chartProcPerMode = new Chart(canvasProcPerMode, {
 });
 
 var canvasContractsPerMode = document.getElementById('contracts-per-mode').getContext('2d');
-
 var chartContractsPerMode = new Chart(canvasContractsPerMode, {
     type: 'bar',
     data: {
@@ -114,7 +113,6 @@ var chartContractsPerMode = new Chart(canvasContractsPerMode, {
 });
 
 var canvasSpendingPerMode = document.getElementById('spending-per-mode').getContext('2d');
-
 var chartSpendingPerMode = new Chart(canvasSpendingPerMode, {
     type: 'bar',
     data: {
@@ -179,9 +177,8 @@ var chartSpendingPerMode = new Chart(canvasSpendingPerMode, {
     }
 });
 
-// timelines
+// Timelines
 var canvasITBtimeline = document.getElementById('itb-timeline').getContext('2d');
-
 var chartITBtimeline =  new Chart(canvasITBtimeline, {
     type: 'line',
     data: {
@@ -220,7 +217,6 @@ var chartITBtimeline =  new Chart(canvasITBtimeline, {
 
 // Women
 var canvasWomenContractors = document.getElementById('women-contractors').getContext('2d');
-
 var chartWomenContractors =  new Chart(canvasWomenContractors, {
     type: 'doughnut',
     data: {
@@ -258,7 +254,6 @@ var chartWomenContractors =  new Chart(canvasWomenContractors, {
 });
 
 var canvasWomenContracts = document.getElementById('women-contracts').getContext('2d');
-
 var chartWomenContracts =  new Chart(canvasWomenContracts, {
     type: 'doughnut',
     data: {
@@ -296,7 +291,6 @@ var chartWomenContracts =  new Chart(canvasWomenContracts, {
 });
 
 var canvasWomenAmount = document.getElementById('women-amount').getContext('2d');
-
 var chartWomenAmount=  new Chart(canvasWomenAmount, {
     type: 'doughnut',
     data: {
@@ -334,7 +328,6 @@ var chartWomenAmount=  new Chart(canvasWomenAmount, {
 });
 
 var canvasWomenProjects = document.getElementById('women-projects').getContext('2d');
-
 var chartWomenProjects =  new Chart(canvasWomenProjects, {
     type: 'doughnut',
     data: {
@@ -367,6 +360,266 @@ var chartWomenProjects =  new Chart(canvasWomenProjects, {
         responsive: true,
         legend: {
             display: false
+        }
+    }
+});
+
+// ITB
+var canvasITBcontracts = document.getElementById('itb-top-contracts').getContext('2d');
+var chartITBcontracts = new Chart(canvasITBcontracts, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['LAFORTEZA PHARMACY', 'ASEANA GENERAL MERCHANDISE', 'BEROVAN MARKETING INC.', 'AGREDA SHELL STATION', 'ARGO DISTRIBUTORS INC.'],
+        datasets: [{
+            label: 'Contracts Awarded',
+            data: [17, 17, 13, 11, 11],
+            backgroundColor: 'rgba(255, 212, 91, 0.85)'
+        }]
+    },
+    options: {
+        title: {
+            display: true,
+            fontSize: 24,
+            fontColor: '#212529',
+            text: 'Top Suppliers by Contracts Awarded'
+        },
+        scales: {
+            xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Contracts Awarded'
+                },
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+var canvasITBamounts = document.getElementById('itb-top-amounts').getContext('2d');
+var chartITBamounts = new Chart(canvasITBamounts, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['LAFORTEZA PHARMACY', 'ASEANA GENERAL MERCHANDISE', 'MEDICAL GALLERY TRADING CO.', 'AGREDA SHELL STATION', 'BEROVAN MARKETING INC.'],
+        datasets: [{
+            label: 'Contract Amount (PHP)',
+            data: [36464976.30, 36042410.00, 29223626.00, 28092766.00, 24526889.45],
+            backgroundColor: 'rgba(255, 212, 91, 0.85)'
+        }]
+    },
+    options: {
+        title: {
+            display: true,
+            fontSize: 24,
+            fontColor: '#212529',
+            text: 'Top Suppliers by Contract Amount'
+        },
+        scales: {
+            xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Contract Amount (PHP)'
+                },
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+// SVP
+var canvasSVPcontracts = document.getElementById('svp-top-contracts').getContext('2d');
+var chartSVPcontracts = new Chart(canvasSVPcontracts, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['SPRINTER LUMBER HARDWARE', 'PEOPLES GENERAL MERCHANDISE', 'ACE CENTERPOINT', 'EMCOR, INC.', 'PA GASOLINE STATION'],
+        datasets: [{
+            label: 'Contracts Awarded',
+            data: [29, 23, 15, 13, 11],
+            backgroundColor:  'rgba(255, 212, 91, 0.85)'
+        }]
+    },
+    options: {
+        title: {
+            display: true,
+            fontSize: 24,
+            fontColor: '#212529',
+            text: 'Top Suppliers by Contracts Awarded'
+        },
+        scales: {
+            xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Contracts Awarded'
+                },
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+var canvasSVPamounts = document.getElementById('svp-top-amounts').getContext('2d');
+var chartSVPamounts = new Chart(canvasSVPamounts, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['PA GASOLINE STATION', 'SPRINTER LUMBER HARDWARE', 'DSSD FAMILY REALTY CORP.', 'APO PRODUCTION UNIT, INC.', 'FRED-ANNS FOODHAUS'],
+        datasets: [{
+            label: 'Contract Amount (PHP)',
+            data: [1520036.39, 1407710.91, 1188763.7, 1032000, 977500],
+            backgroundColor: 'rgba(255, 212, 91, 0.85)'
+        }]
+    },
+    options: {
+        title: {
+            display: true,
+            fontSize: 24,
+            fontColor: '#212529',
+            text: 'Top Suppliers by Contract Amount'
+        },
+        scales: {
+            xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Contract Amount (PHP)'
+                },
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+// SM
+var canvasSMcontracts = document.getElementById('sm-top-contracts').getContext('2d');
+var chartSMcontracts = new Chart(canvasSMcontracts, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['PEOPLES GENERAL MERCHANDISE', 'STARBRIGHT OFFICE DEPOT', 'GSC KRISTAN EDUC. SUPPLY', 'DADIANGAS CROWN BOOKSTORE', 'GAKKEN PHILIPPINES'],
+        datasets: [{
+            label: 'Contracts Awarded',
+            data: [67, 7, 4, 2, 2],
+            backgroundColor:  'rgba(255, 212, 91, 0.85)'
+        }]
+    },
+    options: {
+        title: {
+            display: true,
+            fontSize: 24,
+            fontColor: '#212529',
+            text: 'Top Suppliers by Contracts Awarded'
+        },
+        scales: {
+            xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Contracts Awarded'
+                },
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+var canvasSMamounts = document.getElementById('sm-top-amounts').getContext('2d');
+var chartSMamounts = new Chart(canvasSMamounts, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['PEOPLES GENERAL MERCHANDISE', 'DADIANGAS CROWN BOOKSTORE', 'STARBRIGHT OFFICE DEPOT', 'GSC KRISTAN EDUC. SUPPLY', 'GAKKEN PHILIPPINES'],
+        datasets: [{
+            label: 'Contract Amount (PHP)',
+            data: [2111685.69, 497409.74, 259874.60, 40720.00, 26260.00],
+            backgroundColor: 'rgba(255, 212, 91, 0.85)'
+        }]
+    },
+    options: {
+        title: {
+            display: true,
+            fontSize: 24,
+            fontColor: '#212529',
+            text: 'Top Suppliers by Contract Amount'
+        },
+        scales: {
+            xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Contract Amount (PHP)'
+                },
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+// DC
+var canvasDCcontracts = document.getElementById('dc-top-contracts').getContext('2d');
+var chartDCcontracts = new Chart(canvasDCcontracts, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['PHILIPPINE DUPLICATORS, INC.', 'COPYLANDIA OFFICE SYSTEMS', 'U-BIX CORPORATION', 'CD TECHNOLOGIES ASIA', 'MITA GENERAL SANTOS'],
+        datasets: [{
+            label: 'Contracts Awarded',
+            data: [21, 14, 8, 4, 3],
+            backgroundColor:  'rgba(255, 212, 91, 0.85)'
+        }]
+    },
+    options: {
+        title: {
+            display: true,
+            fontSize: 24,
+            fontColor: '#212529',
+            text: 'Top Suppliers by Contracts Awarded'
+        },
+        scales: {
+            xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Contracts Awarded'
+                },
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+var canvasDCamounts = document.getElementById('dc-top-amounts').getContext('2d');
+var chartDCamounts = new Chart(canvasDCamounts, {
+    type: 'horizontalBar',
+    data: {
+        labels: [ 'COPYLANDIA OFFICE SYSTEMS', 'ABS-CBN CORPORATION', 'PHILIPPINE DUPLICATORS, INC.','U-BIX CORPORATION', 'CD TECHNOLOGIES ASIA'],
+        datasets: [{
+            label: 'Contract Amount (PHP)',
+            data: [569433.32, 500000.00, 422460.34, 126232, 37023.6],
+            backgroundColor: 'rgba(255, 212, 91, 0.85)'
+        }]
+    },
+    options: {
+        title: {
+            display: true,
+            fontSize: 24,
+            fontColor: '#212529',
+            text: 'Top Suppliers by Contract Amount'
+        },
+        scales: {
+            xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Contract Amount (PHP)'
+                },
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
         }
     }
 });

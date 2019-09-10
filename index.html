@@ -389,7 +389,7 @@
                                         <div class='card'>
                                             <div class='card-body bg-theme-yellow'>
                                                 <h2 id='itb-activities' class='card-title theme-card-header'>187</h2>
-                                                <p class='card-text text-secondary' style='text-align: center;'>Procurement Activites</p>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Procurement Activities</p>
                                             </div>
                                         </div>
                                     </div>
@@ -483,6 +483,16 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class='row pt-2 pb-4'>
+                                    <div class='col-lg-6 col-sm-12 py-2'>
+                                        <canvas id='itb-top-contracts' width='480' height='360'></canvas>
+                                    </div>
+                                    <div class='col-lg-6 col-sm-12 py-2'>
+                                        <canvas id='itb-top-amounts' width='480' height='360'></canvas>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -496,7 +506,90 @@
 
                         <div id='monitoring-svp' class='collapse' aria-labelledby='monitoring-svp-header'>
                             <div class='card-body'>
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                <div class='row pt-2 pb-4'>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='svp-activities' class='card-title theme-card-header'>1122</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Procurement Activities</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='svp-completed' class='card-title theme-card-header'>938 (84%)</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Completed Procurement</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='svp-failed' class='card-title theme-card-header'>184 (16%)</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Failed Procurement</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='svp-contracts' class='card-title theme-card-header'>1407</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Contracts Awarded</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='svp-winners' class='card-title theme-card-header'>109</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Unique Winners</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='svp-contracts-per-winner' class='card-title theme-card-header'>12.90</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Ave. Contracts/Winner</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='svp-amount' class='card-title theme-card-header'>104.9 M</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Amount of Contracts</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='svp-abc' class='card-title theme-card-header'>126.1 M</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Approved Budget</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='svp-eff' class='card-title theme-card-header'>83.20%</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Spending Efficiency</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class='row pt-2 pb-4'>
+                                    <div class='col-lg-6 col-sm-12 py-2'>
+                                        <canvas id='svp-top-contracts' width='480' height='360'></canvas>
+                                    </div>
+                                    <div class='col-lg-6 col-sm-12 py-2'>
+                                        <canvas id='svp-top-amounts' width='480' height='360'></canvas>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -510,7 +603,90 @@
 
                         <div id='monitoring-shopping' class='collapse' aria-labelledby='monitoring-shopping-header'>
                             <div class='card-body'>
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                <div class='row pt-2 pb-4'>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='sm-activities' class='card-title theme-card-header'>93</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Procurement Activities</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='sm-completed' class='card-title theme-card-header'>74 (80%)</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Completed Procurement</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='sm-failed' class='card-title theme-card-header'>19 (20%)</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Failed Procurement</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='sm-contracts' class='card-title theme-card-header'>50</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Contracts Awarded</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='sm-winners' class='card-title theme-card-header'>7</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Unique Winners</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='sm-contracts-per-winner' class='card-title theme-card-header'>7.14</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Ave. Contracts/Winner</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='sm-amount' class='card-title theme-card-header'>1.76 M</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Amount of Contracts</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='sm-abc' class='card-title theme-card-header'>1.90 M</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Approved Budget</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='sm-eff' class='card-title theme-card-header'>92.38%</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Spending Efficiency</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class='row pt-2 pb-4'>
+                                    <div class='col-lg-6 col-sm-12 py-2'>
+                                        <canvas id='sm-top-contracts' width='480' height='360'></canvas>
+                                    </div>
+                                    <div class='col-lg-6 col-sm-12 py-2'>
+                                        <canvas id='sm-top-amounts' width='480' height='360'></canvas>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -524,7 +700,90 @@
 
                         <div id='monitoring-direct-contracting' class='collapse' aria-labelledby='monitoring-direct-contracting-header'>
                             <div class='card-body'>
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                <div class='row pt-2 pb-4'>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='dc-activities' class='card-title theme-card-header'>54</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Procurement Activities</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='dc-completed' class='card-title theme-card-header'>47 (82%)</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Completed Procurement</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='dc-failed' class='card-title theme-card-header'>7 (18%)</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Failed Procurement</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='dc-contracts' class='card-title theme-card-header'>87</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Contracts Awarded</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='dc-winners' class='card-title theme-card-header'>9</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Unique Winners</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='dc-contracts-per-winner' class='card-title theme-card-header'>9.67</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Ave. Contracts/Winner</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='dc-amount' class='card-title theme-card-header'>3.00 M</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Amount of Contracts</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='dc-abc' class='card-title theme-card-header'>3.89 M</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Approved Budget</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4 col-sm-6 col-xs-12 p-1'>
+                                        <div class='card'>
+                                            <div class='card-body bg-theme-yellow'>
+                                                <h2 id='dc-eff' class='card-title theme-card-header'>77.15%</h2>
+                                                <p class='card-text text-secondary' style='text-align: center;'>Spending Efficiency</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class='row pt-2 pb-4'>
+                                    <div class='col-lg-6 col-sm-12 py-2'>
+                                        <canvas id='dc-top-contracts' width='480' height='360'></canvas>
+                                    </div>
+                                    <div class='col-lg-6 col-sm-12 py-2'>
+                                        <canvas id='dc-top-amounts' width='480' height='360'></canvas>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -693,9 +952,11 @@
 
     <footer id='sticky-footer' class='mt-4'>
         <div class='container my-2'>
-            <small class='text-white'>This webpage was designed and developed by <a href='https://bnhr.xyz'>BNHR</a> with the help and support of <a href='https://www.hivos.org/'>Hivos - Humanist Institute for Cooperation with Developing Countries</a>, <br>the <a href='eccp.com/'>European Chamber of Commerce of the Philippines (ECCP)</a>, and the <a href='http://southcotabato.gov.ph/'>Provincial Government of South Cotabato</a>.<br>
+            <div class='col-md-12 col-sm-12'>
+            <small class='text-white'>This webpage was designed and developed by <a href='https://bnhr.xyz'>BNHR</a> with the help and support of <a href='https://www.hivos.org/'>Hivos - Humanist Institute for Cooperation with Developing Countries</a>, the <a href='eccp.com/'>European Chamber of Commerce of the Philippines (ECCP)</a>, and the <a href='http://southcotabato.gov.ph/'>Provincial Government of South Cotabato</a>.<br>
             The datasets in this webpage are licensed under <a href='https://creativecommons.org/licenses/by-sa/4.0/'> a Creative Commons Attribution-ShareAlike 4.0 International License</a>.
             </small>
+            </div>
         </div>
     </footer>
 
